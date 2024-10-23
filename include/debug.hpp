@@ -37,11 +37,8 @@ namespace NameSpace
                         information, potentially leading to data loss or errors. */
 
         debug();
-
         void prepare(const int level);
-
         const std::string extract(const std::string &file_name);
-
         ~debug();
 
     public:
@@ -50,25 +47,21 @@ namespace NameSpace
          * one instance exists.
          */
         static debug *get_single_instance();
-
         /**
          * @brief Enable the output of debug information categorized at the 'info' level, typically
          * providing general operational details.
          */
         std::ostream &info(const std::string &file_name, const int line);
-
         /**
          * @brief Enable the output of debug information categorized at the 'notice' level,
          * typically providing general operational details.
          */
         std::ostream &notice(const std::string &file_name, const int line);
-
         /**
          * @brief Enable the output of debug information categorized at the 'warning' level,
          * typically providing general operational details.
          */
         std::ostream &warning(const std::string &file_name, const int line);
-
         /**
          * @brief Enable the output of debug information categorized at the 'error' level, typically
          * providing general operational details.

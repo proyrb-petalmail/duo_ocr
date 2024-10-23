@@ -11,12 +11,10 @@ namespace NameSpace
     private:
         static context *single_instance; /* A unique instance of the object or component, ensuring
                                           that only one instance exists at any given time. */
-
-        std::string program_directory; /* The location of this program's directory within the file
-                                          system, where its files and resources are stored. */
+        std::string program_directory;   /* The location of this program's directory within the file
+                                            system, where its files and resources are stored. */
 
         context();
-
         ~context();
 
     public:
@@ -25,7 +23,6 @@ namespace NameSpace
          * one instance exists.
          */
         static context *get_single_instance();
-
         /**
          * @brief Retrieve and return the path to the directory where this program is located within
          * the file system.

@@ -20,7 +20,7 @@ int main(const int argument_count, char **const argument_value)
     argument_parser.add<string>(Argument_Model, Argument_Model_Short, Argument_Model_Refer,
                                 Argument_Model_Need, Argument_Model_Default);
     argument_parser.parse_check(argument_count, argument_value);
-    debug::get_single_instance()->info(__FILE__, __LINE__)
+    debug::get_single_instance()->notice(__FILE__, __LINE__)
         << "Complete Command Line Argument Validation." << Debug_Complete;
 
     // Deploy GUI and Execute LVGL
