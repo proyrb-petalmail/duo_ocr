@@ -8,16 +8,8 @@
 
 using namespace std;
 
-#define BACKGROUND_COLOR       0xEEEEEE
-#define FOREGROUND_COLOR       0xFFFFFF
-#define CONTAINER_MARGIN       100
-#define BAR_HEIGHT             100
-#define BAR_RADIUS             BAR_HEIGHT / 3
-#define EXIT_BUTTON_SIZE       BAR_HEIGHT * 0.65
-#define EXIT_BUTTON_IMAGE_SIZE BAR_HEIGHT * 0.55
-#define BAR_PAD                (BAR_HEIGHT - EXIT_BUTTON_SIZE) / 2
-#define LINE_WIDTH             4
-#define PANEL_HEIGHT           60
+#define BACKGROUND_COLOR 0xEEEEEE
+#define FOREGROUND_COLOR 0xFFFFFF
 
 namespace NameSpace
 {
@@ -31,66 +23,6 @@ namespace NameSpace
     }
 
     gui *gui::single_instance = nullptr;
-
-    // void gui::short_click_event_callback(lv_event_t *const event)
-    // {
-    //     lv_obj_t *const event_trigger = (lv_obj_t *)lv_event_get_target(event);
-    //     gui *const data = ((gui *)lv_event_get_user_data(event));
-    //     if (event_trigger == data->exit_button)
-    //     {
-    //         Debug_Log("exit");
-    //         exit(0);
-    //     }
-    //     else if (event_trigger == data->name_editor)
-    //     {
-    //         Debug_Log("name_editor trigger short_click_event");
-    //         lv_keyboard_set_textarea(data->keyboard, event_trigger);
-    //         lv_anim_t animation;
-    //         lv_anim_init(&animation);
-    //         lv_anim_set_exec_cb(&animation, (lv_anim_exec_xcb_t)lv_obj_set_y);
-    //         lv_anim_set_var(&animation, data->input_container);
-    //         lv_anim_set_duration(&animation, 500);
-    //         lv_anim_set_values(&animation, lv_obj_get_y_aligned(data->input_container), 0);
-    //         lv_anim_set_path_cb(&animation, lv_anim_path_ease_out);
-    //         lv_anim_start(&animation);
-    //     }
-    //     else if (event_trigger == data->password_editor)
-    //     {
-    //         Debug_Log("password_editor trigger short_click_event");
-    //         lv_keyboard_set_textarea(data->keyboard, event_trigger);
-    //         lv_anim_t animation;
-    //         lv_anim_init(&animation);
-    //         lv_anim_set_exec_cb(&animation, (lv_anim_exec_xcb_t)lv_obj_set_y);
-    //         lv_anim_set_var(&animation, data->input_container);
-    //         lv_anim_set_duration(&animation, 500);
-    //         lv_anim_set_values(&animation, lv_obj_get_y_aligned(data->input_container), 0);
-    //         lv_anim_set_path_cb(&animation, lv_anim_path_ease_out);
-    //         lv_anim_start(&animation);
-    //     }
-    //     else if (event_trigger == data->disconnect_button)
-    //     {
-    //         Debug_Log("disconnect_button trigger short_click_event");
-    //     }
-    //     else if (event_trigger == data->connect_button)
-    //     {
-    //         Debug_Log("connect_button trigger short_click_event");
-    //     }
-    //     else
-    //     {
-    //         Debug_Log("screen or container trigger short_click_event");
-    //         lv_keyboard_set_textarea(data->keyboard, nullptr);
-    //         lv_anim_t animation;
-    //         lv_anim_init(&animation);
-    //         lv_anim_set_exec_cb(&animation, (lv_anim_exec_xcb_t)lv_obj_set_y);
-    //         lv_anim_set_var(&animation, data->input_container);
-    //         lv_anim_set_duration(&animation, 500);
-    //         lv_anim_set_values(&animation, lv_obj_get_y_aligned(data->input_container),
-    //                            lv_obj_get_height(data->input_container));
-    //         lv_anim_set_path_cb(&animation, lv_anim_path_ease_out);
-    //         lv_anim_start(&animation);
-    //     }
-    //     Debug_Log("click");
-    // }
 
     gui *gui::initialize(const string &fbdev, const string &evdev)
     {
@@ -123,7 +55,7 @@ namespace NameSpace
         lv_obj_remove_flag(this->screen, LV_OBJ_FLAG_SCROLLABLE);
         lv_obj_update_layout(this->screen);
         debug::get_single_instance()->notice(__FILE__, __LINE__)
-            << "Complete Deploy." << Debug_Complete;
+            << "Complete GUI Deploy." << Debug_Complete;
     }
 
     void gui::execute()
