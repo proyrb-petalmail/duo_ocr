@@ -16,6 +16,9 @@ namespace NameSpace
         lv_display_t *display = nullptr;
         lv_indev_t *indev = nullptr;
         lv_obj_t *screen = nullptr;
+        lv_obj_t *button = nullptr;
+        lv_obj_t *image = nullptr;
+        lv_obj_t *label = nullptr;
 
         gui();
         void deploy();

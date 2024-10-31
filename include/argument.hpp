@@ -19,5 +19,5 @@
 #define Argument_Model_Short   'm'
 #define Argument_Model_Refer                                                                       \
     "Define the specific program that represents the model used for computations or simulations."
-#define Argument_Model_Need    true
+#define Argument_Model_Need    false
 #define Argument_Model_Default ""

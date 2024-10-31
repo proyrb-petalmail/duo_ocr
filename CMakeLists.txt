@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.10)
 
 project(duo_ocr)
 
-# set(CMAKE_C_COMPILER riscv64-unknown-linux-musl-gcc)
-# set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -g0 -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d")
-# set(CMAKE_CXX_COMPILER riscv64-unknown-linux-musl-g++)
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -g0 -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d")
+set(CMAKE_C_COMPILER riscv64-unknown-linux-musl-gcc)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -g0 -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d")
+set(CMAKE_CXX_COMPILER riscv64-unknown-linux-musl-g++)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -g0 -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d")
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/boot)
 
